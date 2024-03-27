@@ -9,15 +9,30 @@
 		"lint": "next lint"
 	},
 	"dependencies": {
+		"dotenv": "^16.4.5",
 		"next": "^14.1.4",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0"
 	},
 	"devDependencies": {
+		"@nomiclabs/hardhat-ethers": "^2.2.3",
+		"@nomiclabs/hardhat-etherscan": "^3.1.8",
+		"@nomiclabs/hardhat-waffle": "^2.0.6",
+		"@typechain/ethers-v6": "^0.5.1",
+		"@typechain/hardhat": "^9.1.0",
+		"@types/chai": "^4.3.14",
+		"@types/mocha": "^10.0.6",
 		"@types/node": "^20.11.30",
 		"@types/react": "^18.2.72",
+		"chai": "^5.1.0",
 		"eslint": "^8.57.0",
 		"eslint-config-next": "^14.1.4",
+		"ethers": "^6.11.1",
+		"hardhat": "^2.22.2",
+		"hardhat-gas-reporter": "^2.0.2",
+		"solidity-coverage": "^0.8.11",
+		"ts-node": "^10.9.2",
+		"typechain": "^8.3.2",
 		"typescript": "^5.4.3"
 	}
 }
