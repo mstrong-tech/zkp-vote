@@ -1,0 +1,14 @@
+{
+  "inputs": [
+    {
+      "name": "x",
+      "public": false,
+      "type": "u8"
+    }
+  ],
+  "outputs": [
+    {
+      "type": "u8"
+    }
+  ]
+}
