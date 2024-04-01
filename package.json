@@ -10,6 +10,7 @@
 	},
 	"dependencies": {
 		"dotenv": "^16.4.5",
+		"ethers": "^6.11.1",
 		"next": "^14.1.4",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0"
@@ -27,7 +28,6 @@
 		"chai": "^5.1.0",
 		"eslint": "^8.57.0",
 		"eslint-config-next": "^14.1.4",
-		"ethers": "^6.11.1",
 		"hardhat": "^2.22.2",
 		"hardhat-gas-reporter": "^2.0.2",
 		"solidity-coverage": "^0.8.11",
