@@ -4,9 +4,15 @@ Even or Odd voting smart contract using Zero Knowledge Proof(zkSNARKs) on Ethere
 
 The number you used for voting is hidden; Only the result is verified by zkSNARKs and stored on the blockchain.
 
-Transaction result: https://ropsten.etherscan.io/tx/0x9447fd2e774b7a9bc465806d69539b53b8bc0d388edaa1eea2a76590f608fa29
+Example of transaction result: https://ropsten.etherscan.io/tx/0x9447fd2e774b7a9bc465806d69539b53b8bc0d388edaa1eea2a76590f608fa29
 
 ## Try it out
+
+https://zkp-vote-tomoima525.vercel.app/
+
+**Make sure that you are connected to Ropsten network and have some ether in your account**
+
+![metamask](https://user-images.githubusercontent.com/6277118/140975326-02107676-1e37-4357-9df8-9437bc6e7da3.png)
 
 ## How does this work?
 
@@ -31,7 +37,7 @@ We use hardhat for deployment and testing
   ...
   VoteEvenOrOdd deployed to: 0x5FbDB2315678afecb367f032d93F642f64180aa3
   ```
-- Create `.env` file under the root of the project and copy the deployed address
+- Create `.env.local` file under the root of the project and copy the deployed address
   ```
   VOTE_ADDRESS_LOCAL=0x5FbDB2315678afecb367f032d93F642f64180aa3
   ```
@@ -57,7 +63,7 @@ You can provide your own proving.key by running Zokrates locally. **You also nee
   ```
   e.g.
   ```
-  $ docker run -v ~/workspace/solidity/zkp-vote/contracts/:/home/zokrates/code -ti zokrates/zokrates /bin/bash
+  $ docker run -v ~/workspace/solidity/zkp-toy/contracts/:/home/zokrates/code -ti zokrates/zokrates /bin/bash
   ```
 - Run the command below to generate the proving.key and the verification.key
   ```
@@ -66,7 +72,5 @@ You can provide your own proving.key by running Zokrates locally. **You also nee
 - Upload proving.key somewhere accessible
 - Update the download link at https://github.com/mstrong-tech/zkp-vote/blob/main/src/pages/index.tsx#L175
   ```
-    const res = await fetch(
-    "https://your-public.site/proving.key"
-    );
+  const res = await fetch("https://your-public.site/proving.key");
   ```
