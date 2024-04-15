@@ -18,7 +18,7 @@ https://zkp-vote-tomoima525.vercel.app/
 
 [Zokrates](https://github.com/Zokrates/ZoKrates) is used for Zero Knowledge Proof. Here's the steps:
 
-1. Compute `witness` by [calculating Even or Odd](https://github.com/mstrong-tech/zkp-vote/blob/main/src/pages/index.tsx#L84) using a program compiled with zokrates-js.
+1. Compute `witness` by calculating Even or Odd using a program compiled with zokrates-js.
 2. Using `witness` and the `proving.key` provided by the verifier(in this project, proving.key is in https://github.com/mstrong-tech/zkp-vote/blob/main/public/proving.key), we generate `proof` and `inputs`
 3. Submit tranactions to the blockchain. After the zkSNARKs-powered smart contract [verifies your `proof` and `inputs`](https://github.com/mstrong-tech/zkp-vote/blob/main/contracts/circuits/VoteEvenOrOdd.sol#L359), it will update the stored result.
 
@@ -75,7 +75,7 @@ You can provide your own proving.key by running Zokrates locally. **You also nee
   $ zokrates setup
   ```
 - Upload proving.key somewhere accessible
-- Update the download link at https://github.com/mstrong-tech/zkp-vote/blob/main/src/pages/index.tsx#L175
+- Update the download link
   ```
   const res = await fetch("https://your-public.site/proving.key");
   ```
